@@ -34,3 +34,21 @@ Website tĩnh dành cho game Nông Trại Mèo. Chạy trực tiếp trên GitHu
 - Ảnh xử lý trong RAM trình duyệt, **không lưu qua lần tải lại trang**. Hãy tải ZIP ngay. Điện thoại yếu có thể hết RAM khi xử lý nhiều ảnh lớn.
 - ZIP sử dụng định dạng STORE không nén; các PNG vốn đã nén nên ZIP có thể lớn.
 - Không có API key hay dữ liệu ảnh nào được gửi về server của công cụ.
+
+
+## Quy trình v3.1 chống lệch phong cách / hướng
+1. Tạo ảnh GỐC một hướng trước; tải lên ChatGPT cùng ảnh phong cách.
+2. Mỗi lần chỉ sao chép **một** prompt trong danh sách, không gửi tất cả cùng lúc.
+3. Khi tạo hướng tiếp theo, đính kèm ảnh gốc vừa được duyệt và ảnh phong cách.
+4. Kiểm tra đầu/mũi/đuôi theo chỉ dẫn hướng trái/phải; nếu sai yêu cầu tạo lại trước khi nhập.
+5. Nhập ảnh vào tool, kiểm tra nền alpha, chuẩn hóa kích thước rồi xuất ZIP.
+6. Khóa canvas không đồng nghĩa AI giữ đúng hình khối qua các góc; cần duyệt thủ công.
+
+
+## v3.2: Cây trồng + thu hoạch + 5 giai đoạn
+- Chọn nhóm **Cây trồng**, sau đó chọn dạng **Cả cây đang trồng và nông sản**.
+- Chọn **5 giai đoạn** để có: hạt giống, mầm, cây non, cây trưởng thành, cây sẵn sàng thu hoạch; cộng thêm một prompt cho nông sản đã hái.
+- Mỗi hướng cây trồng là một lượt riêng. Nông sản thu hoạch dùng góc 3/4 và một lượt riêng.
+- Đính kèm cùng ảnh style tham chiếu mỗi lượt; dùng ảnh đã duyệt của chính cây để khóa hình dáng ở lượt tiếp theo.
+- Free/Plus vẫn phải tạo ảnh trong ChatGPT, sau đó nhập ảnh về website. Website không thể gọi dịch vụ tạo ảnh ChatGPT Free/Plus tự động.
+- Chú ý: Tool chuẩn hóa canvas nhưng không thể bảo đảm hình vẽ AI chính xác tuyệt đối hoặc nền alpha thật nếu ảnh gốc không có alpha.
